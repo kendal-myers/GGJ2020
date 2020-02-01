@@ -1,9 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
+
+[AddComponentMenu("Camera-Control/Smooth Follow 3D CSharp")]
 
 public class CameraController : MonoBehaviour
 {
+
     // The target we are following
     public Transform target;
     // The distance in the x-z plane to the target
@@ -14,39 +16,42 @@ public class CameraController : MonoBehaviour
     public float heightDamping = 2.0f;
     public float rotationDamping = 3.0f;
 
-    // Place the script in the Camera-Control group in the component menu
-    [AddComponentMenu("Camera-Control/Smooth Follow")]
-
     void LateUpdate()
     {
         // Early out if we don't have a target
-        if (!target) return;
+        if (!target)
+            return;
 
-        // Calculate the current rotation angles
-        float wantedRotationAngle = target.eulerAngles.y;
-        float wantedHeight = target.position.y + height;
+        Vector3 followpos = new Vector3(0.0f, height, -distance);
+        Quaternion lookrotation = Quaternion.identity;
 
-        float currentRotationAngle = transform.eulerAngles.y;
-        float currentHeight = transform.position.y;
+        lookrotation.eulerAngles = new Vector3(30.0f, 0.0f, 0.0f);
 
-        // Damp the rotation around the y-axis
-        currentRotationAngle = Mathf.LerpAngle(currentRotationAngle, wantedRotationAngle, rotationDamping * Time.deltaTime);
+        Matrix4x4 m1 = Matrix4x4.TRS(target.position, target.rotation, Vector3.one);
+        Matrix4x4 m2 = Matrix4x4.TRS(followpos, lookrotation, Vector3.one);
+        Matrix4x4 combined = m1 * m2;
 
-        // Damp the height
-        currentHeight = Mathf.Lerp(currentHeight, wantedHeight, heightDamping * Time.deltaTime);
+        // THE WAY TO GET POSITION AND ROTATION FROM A MATRIX4X4:
+        Vector3 position = combined.GetColumn(3);
 
-        // Convert the angle into a rotation
-        var currentRotation = Quaternion.Euler(0, currentRotationAngle, 0);
+        Quaternion rotation = Quaternion.LookRotation(
+        combined.GetColumn(2),
+        combined.GetColumn(1)
+        );
 
-        // Set the position of the camera on the x-z plane to:
-        // distance meters behind the target
-        transform.position = target.position;
-        transform.position -= currentRotation * Vector3.forward * distance;
 
-        // Set the height of the camera
-        transform.position = new Vector3(transform.position.x, currentHeight, transform.position.z);
+        Quaternion wantedRotation = rotation;
+        Quaternion currentRotation = transform.rotation;
 
-        // Always look at the target
-        transform.LookAt(target);
+        Vector3 wantedPosition = position;
+        Vector3 currentPosition = transform.position;
+
+        currentRotation = Quaternion.Lerp(currentRotation, wantedRotation, rotationDamping * Time.deltaTime);
+        currentPosition = Vector3.Lerp(currentPosition, wantedPosition, heightDamping * Time.deltaTime);
+
+        transform.localRotation = currentRotation;
+        transform.localPosition = currentPosition;
+
+
     }
 }
