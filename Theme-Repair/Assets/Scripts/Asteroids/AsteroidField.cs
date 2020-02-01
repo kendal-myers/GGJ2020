@@ -75,6 +75,7 @@ public class AsteroidField : MonoBehaviour
                 }
             }
         }
+        lastPosition = transform.position;
     }
 
     public void GenerateAsteroidField()
