@@ -24,7 +24,14 @@ public class FlightController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * turnSpeedH, -Input.GetAxis("Vertical") * turnSpeedV, forwardSpeed), ForceMode.Acceleration);
-        rb.rotation = Quaternion.Euler(new Vector3(-rb.velocity.y * turnSpeedV, 0, -rb.velocity.x * turnSpeedH));
+        float v = Input.GetAxis("Vertical") == 0 ? -transform.worldToLocalMatrix.MultiplyVector(rb.angularVelocity).x * 1f : Input.GetAxis("Vertical") * turnSpeedV;
+        float h = Input.GetAxis("Horizontal") == 0 ? -transform.worldToLocalMatrix.MultiplyVector(rb.angularVelocity).z * 1f : -Input.GetAxis("Horizontal") * turnSpeedH;
+
+        Debug.Log("vel " + rb.angularVelocity);
+        Debug.Log("v" + v);
+        Debug.Log("h" + h);
+
+        rb.AddRelativeForce(Vector3.forward * forwardSpeed, ForceMode.Acceleration);
+        rb.AddRelativeTorque(new Vector3(v, 0, h), ForceMode.Acceleration);
     }
 }
