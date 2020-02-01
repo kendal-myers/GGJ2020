@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+  m_AmbientSkyColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -441,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 1594528886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 75, y: 75, z: 75}
+  m_LocalScale: {x: 130, y: 130, z: 130}
   m_Children: []
   m_Father: {fileID: 564755762}
   m_RootOrder: 0
@@ -460,12 +460,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container: {fileID: 886493603}
   asteroidPrefabs:
-  - {fileID: 2650736559526129725, guid: fba53e808023f304bb815f51b32dcb07, type: 3}
-  - {fileID: 4245032554128467680, guid: 086445a5f2dd35d4d9359be8bce4ffae, type: 3}
+  - {fileID: 636532083895793281, guid: 8f1a4070cece7c14c8924063d2f7f471, type: 3}
   - {fileID: 636532083895793281, guid: 9305755ba62bee6438f6611e94c6f086, type: 3}
-  density: 1000
-  minRange: 10
-  maxRange: 70
+  density: 500
+  minRange: 20
+  maxRange: 125
   drift: {x: 25, y: 25, z: 25}
 --- !u!135 &1594528889
 SphereCollider:

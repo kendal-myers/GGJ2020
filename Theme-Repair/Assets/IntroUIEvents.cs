@@ -40,6 +40,7 @@ public class IntroUIEvents : MonoBehaviour
         if (nextPage > messages.Count - 1)
         {
             SceneManager.LoadScene("Asteroid Field", new LoadSceneParameters(LoadSceneMode.Single));
+            return;
         }
 
         if (nextPage == messages.Count - 1)
