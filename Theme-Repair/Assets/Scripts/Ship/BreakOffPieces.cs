@@ -25,7 +25,7 @@ public class BreakOffPieces : MonoBehaviour
 
             availableComponents = availableComponents.Where(c => c.lossPriority == availableComponents[0].lossPriority).ToList();
             var component = availableComponents.Random();
-            Debug.Log($"Just lost {component.name}");
+            //Debug.Log($"Just lost {component.name}");
             component.Break();
 
             nextDamage = Time.time + damageCooldown;

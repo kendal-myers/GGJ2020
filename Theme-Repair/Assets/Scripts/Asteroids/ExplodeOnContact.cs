@@ -33,6 +33,6 @@ public class ExplodeOnContact : MonoBehaviour
         }
 
         MobileAsteroidField.Instance.Reposition(this.transform);
-        Debug.Break();
+        
     }
 }
