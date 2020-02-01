@@ -133,10 +133,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 354350388285138771, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3647782415050009406, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: m_Drag
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3647782415050009406, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: m_Mass
+      value: 35000
       objectReference: {fileID: 0}
     - target: {fileID: 5325157175461905076, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
@@ -161,12 +171,12 @@ PrefabInstance:
     - target: {fileID: 8556740446556759116, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: 8556740446556759116, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.722
       objectReference: {fileID: 0}
     - target: {fileID: 8556740446556759116, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}

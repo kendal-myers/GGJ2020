@@ -133,11 +133,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
-    - target: {fileID: 3647782415050009406, guid: 1e10724072975db47845bbed115c2a46,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8556740446556759116, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: m_LocalPosition.x
