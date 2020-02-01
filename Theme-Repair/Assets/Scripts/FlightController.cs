@@ -27,10 +27,6 @@ public class FlightController : MonoBehaviour
         float v = Input.GetAxis("Vertical") == 0 ? -transform.worldToLocalMatrix.MultiplyVector(rb.angularVelocity).x * 1f : Input.GetAxis("Vertical") * turnSpeedV;
         float h = Input.GetAxis("Horizontal") == 0 ? -transform.worldToLocalMatrix.MultiplyVector(rb.angularVelocity).z * 1f : -Input.GetAxis("Horizontal") * turnSpeedH;
 
-        Debug.Log("vel " + rb.angularVelocity);
-        Debug.Log("v" + v);
-        Debug.Log("h" + h);
-
         rb.AddRelativeForce(Vector3.forward * forwardSpeed, ForceMode.Acceleration);
         rb.AddRelativeTorque(new Vector3(v, 0, h), ForceMode.Acceleration);
     }
