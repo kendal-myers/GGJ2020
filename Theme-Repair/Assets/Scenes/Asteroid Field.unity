@@ -462,6 +462,11 @@ MonoBehaviour:
   asteroidPrefabs:
   - {fileID: 636532083895793281, guid: 8f1a4070cece7c14c8924063d2f7f471, type: 3}
   - {fileID: 636532083895793281, guid: 9305755ba62bee6438f6611e94c6f086, type: 3}
+  - {fileID: 636532083895793281, guid: 8f1a4070cece7c14c8924063d2f7f471, type: 3}
+  - {fileID: 636532083895793281, guid: 9305755ba62bee6438f6611e94c6f086, type: 3}
+  - {fileID: 636532083895793281, guid: 8f1a4070cece7c14c8924063d2f7f471, type: 3}
+  - {fileID: 636532083895793281, guid: 9305755ba62bee6438f6611e94c6f086, type: 3}
+  - {fileID: 2650736559526129725, guid: 5d7c09f6c4808f14d89816cc3db01ff1, type: 3}
   density: 500
   minRange: 20
   maxRange: 125
