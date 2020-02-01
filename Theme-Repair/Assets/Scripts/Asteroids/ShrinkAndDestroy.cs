@@ -11,6 +11,8 @@ public class ShrinkAndDestroy : MonoBehaviour
     Vector3[] startScales;
     private void Start()
     {
+        if (pieces == null || pieces.Length == 0)
+            pieces = new Transform[1] { this.transform };
         startScales = pieces.Select(p => p.transform.localScale).ToArray();
     }
 
