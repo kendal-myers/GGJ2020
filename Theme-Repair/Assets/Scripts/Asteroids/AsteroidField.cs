@@ -19,6 +19,12 @@ public class AsteroidField : MonoBehaviour
     {        
         GenerateAsteroidField();
         ClearChunks();
+        int asteroidCount = 0;
+        foreach(var key in chunks.Keys)
+        {
+            asteroidCount += chunks[key].transform.childCount;
+        }
+        Debug.Log("Asteroids Loaded: " + asteroidCount);
     }
 
     private Vector3 lastPosition;
@@ -100,8 +106,7 @@ public class AsteroidField : MonoBehaviour
     }
 
     public void GenerateChunk(Vector3Int chunk)
-    {
-        
+    {        
         //Do not regenerate existing chunks
         if (chunks.ContainsKey(chunk))
             return;

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -141,17 +141,17 @@ PrefabInstance:
     - target: {fileID: 5325157175461905076, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: turnSpeedV
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5325157175461905076, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: turnSpeedH
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5325157175461905076, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: forwardSpeed
-      value: 3
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8556740446556759116, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
@@ -280,10 +280,10 @@ MonoBehaviour:
   - {fileID: 8978970235121456446, guid: 9305755ba62bee6438f6611e94c6f086, type: 3}
   - {fileID: 5667707323117520223, guid: 086445a5f2dd35d4d9359be8bce4ffae, type: 3}
   - {fileID: 5802766686951379842, guid: fba53e808023f304bb815f51b32dcb07, type: 3}
-  chunkSize: 25
-  chunksLoaded: 2
-  density: 12.5
-  jitter: {x: 3, y: 3, z: 3}
+  chunkSize: 30
+  chunksLoaded: 1
+  density: 10
+  jitter: {x: 4, y: 4, z: 4}
   drift: {x: 250, y: 250, z: 250}
 --- !u!4 &990957830
 Transform:
