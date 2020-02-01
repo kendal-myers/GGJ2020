@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: b7257f04708304c4881d9440cadcc586
+  - enabled: 1
+    path: Assets/Scenes/Asteroid Field.unity
+    guid: d74191511754e1e419fea402f2ce8e76
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 926d3f93fe442bb459bcf52e3cae6de0
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 1d44ed60d8c1bc146952e4d346f746ff
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: f729597e10cacd14aa726fa23060cd20
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: b9ec0bd450f9a29428695eeac9caac8b
   m_configObjects: {}
