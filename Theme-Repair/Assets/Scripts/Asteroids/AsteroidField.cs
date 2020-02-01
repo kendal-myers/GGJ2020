@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AsteroidField : MonoBehaviour
 {
     public Transform container;
-    public Rigidbody[] asteroids;
-    public float chunkSize;
+    public GameObject[] asteroids;
+    public int chunkSize;
     public int chunksLoaded = 3;
     public float density;
     public Vector3 jitter = Vector3.one;
@@ -14,6 +15,7 @@ public class AsteroidField : MonoBehaviour
     
 
     public Dictionary<Vector3Int, GameObject> chunks = new Dictionary<Vector3Int, GameObject>();
+    private List<GameObject> disabledChunks = new List<GameObject>();
     
     private void FixedUpdate()
     {        
@@ -24,7 +26,7 @@ public class AsteroidField : MonoBehaviour
         {
             asteroidCount += chunks[key].transform.childCount;
         }
-        Debug.Log("Asteroids Loaded: " + asteroidCount);
+        Debug.Log($"Asteroid count: {asteroidCount}");
     }
 
     private Vector3 lastPosition;
@@ -86,15 +88,23 @@ public class AsteroidField : MonoBehaviour
 
     public void GenerateAsteroidField()
     {
+        var previousChunks = chunks.Keys.ToList();
         for (int x = -chunksLoaded; x <= chunksLoaded; x++)
         {
             for (int y = -chunksLoaded; y <= chunksLoaded; y++)
             {
                 for (int z = -chunksLoaded; z <= chunksLoaded; z++)
-                {                    
-                    GenerateChunk(GetChunk(x, y, z));
+                {
+                    var chunk = GetChunk(x, y, z);
+                    GenerateChunk(chunk);
+                    previousChunks.Remove(chunk);
                 }
             }
+        }
+        foreach(var chunk in previousChunks)
+        {
+            chunks[chunk].SetActive(false);
+            //chunks.Remove(chunk);
         }
     }
 
@@ -106,12 +116,16 @@ public class AsteroidField : MonoBehaviour
     }
 
     public void GenerateChunk(Vector3Int chunk)
-    {        
+    {
         //Do not regenerate existing chunks
         if (chunks.ContainsKey(chunk))
+        {
+            chunks[chunk].SetActive(true);
             return;
+        }
 
         var chunkContainer = new GameObject("Chunk " + chunk.ToString());
+        chunkContainer.transform.position = chunk * chunkSize;
         chunks.Add(chunk, chunkContainer);
 
         for (float offsetX = chunk.x * chunkSize; offsetX < (chunk.x + 1) * chunkSize; offsetX += density)
@@ -122,7 +136,7 @@ public class AsteroidField : MonoBehaviour
                 {                    
                     chunkContainer.transform.parent = container;
                     var obj = Instantiate(asteroids.Random(), new Vector3(offsetX, offsetY, offsetZ) + jitter.Random(true), Random.rotation, chunkContainer.transform);
-                    obj.AddForceAtPosition(drift.Random(true), Random.onUnitSphere, ForceMode.Impulse);                    
+                    //obj.AddForceAtPosition(drift.Random(true), Random.onUnitSphere, ForceMode.Impulse);                    
                 }
             }
         }

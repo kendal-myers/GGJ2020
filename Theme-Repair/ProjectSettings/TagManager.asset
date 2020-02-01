@@ -13,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Debris
+  - Asteroid
+  - Ship
+  - AsteroidDetector
+  - ShipDetector
   - 
   - 
   - 

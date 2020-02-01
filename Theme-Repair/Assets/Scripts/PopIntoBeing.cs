@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class PopIntoBeing : MonoBehaviour
 {
+    Vector3 endScale;
     public float timeToGrow = 1f;
     void Start()
     {
-        StartCoroutine(Embiggen());
+        endScale = transform.localScale;
+        Grow();
     }   
+
+    public void Grow()
+    {
+        StopAllCoroutines();
+        StartCoroutine(Embiggen());
+    }
     
     private IEnumerator Embiggen()
-    {
-        Vector3 endScale = transform.localScale;
+    {        
         Vector3 startScale = Vector3.zero;
         var progress = 0f;
         while (progress < timeToGrow)
@@ -22,7 +29,6 @@ public class PopIntoBeing : MonoBehaviour
             yield return null;
         }
 
-        transform.localScale = endScale;
-        Destroy(this);
+        transform.localScale = endScale;        
     }
 }
