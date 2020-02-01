@@ -153,7 +153,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 564755762}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &177890571
 AudioListener:
@@ -353,7 +353,7 @@ PrefabInstance:
     - target: {fileID: 3778163887166194016, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5325157175461905076, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
@@ -369,6 +369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: forwardSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736190997702222571, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8556740446556759116, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
@@ -533,7 +538,7 @@ Transform:
   m_LocalScale: {x: 75, y: 75, z: 75}
   m_Children: []
   m_Father: {fileID: 564755762}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1594528888
 MonoBehaviour:
