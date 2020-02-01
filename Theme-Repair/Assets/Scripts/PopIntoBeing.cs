@@ -9,7 +9,7 @@ public class PopIntoBeing : MonoBehaviour
     void Start()
     {
         endScale = transform.localScale;
-        Grow();
+        //Grow();
     }   
 
     public void Grow()

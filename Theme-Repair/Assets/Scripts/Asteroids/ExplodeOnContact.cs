@@ -25,8 +25,6 @@ public class ExplodeOnContact : MonoBehaviour
 
     public void Explode(Vector3 collisionVelocity)
     {
-        //Destroy(this.GetComponent<Rigidbody>());
-
         var obj = Instantiate(explodedPrefab, this.transform.position, this.transform.rotation, this.transform.parent);
         foreach (var rb in obj.GetComponentsInChildren<Rigidbody>())
         {
@@ -34,6 +32,6 @@ public class ExplodeOnContact : MonoBehaviour
             rb.AddExplosionForce(explosionForce, this.transform.position, explosionRange);
         }
 
-        Destroy(this.gameObject);
+        MobileAsteroidField.Instance.Reposition(this.transform);
     }
 }
