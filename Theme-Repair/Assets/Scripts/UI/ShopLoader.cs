@@ -14,6 +14,8 @@ public class ShopLoader : MonoBehaviour
     public GameObject[] hideInShop;
     public GameObject displayShip;
     public TrackObject shopTracker;
+    public Sprite[] shopKeepers;
+    public string[] shopKeeperText;
 
     private void Start()
     {
@@ -25,6 +27,9 @@ public class ShopLoader : MonoBehaviour
         currentFlightTime += Time.deltaTime;
         if (currentFlightTime > timeUntilShopAppears)
         {
+            if (currentShopId >= shopKeepers.Length)
+                throw new UnityException("YOU WIN!");
+             
             PlaceShop();
             this.enabled = false;
         }
@@ -32,7 +37,7 @@ public class ShopLoader : MonoBehaviour
 
     private void PlaceShop()
     {
-        var obj = Instantiate(shopPrefabs[currentShopId], Random.onUnitSphere * distanceToShop, Quaternion.identity);
+        var obj = Instantiate(shopPrefabs[currentShopId], realShip.transform.position + Random.onUnitSphere * distanceToShop, Quaternion.identity);
         shopTracker.Obj = obj;
         shopTracker.gameObject.SetActive(true);
     }
@@ -40,10 +45,10 @@ public class ShopLoader : MonoBehaviour
     public void LoadShop(int shopId)
     {
         shopTracker.gameObject.SetActive(false);
-        StartCoroutine(LoadShopAsync());
+        StartCoroutine(LoadShopAsync(shopId));
     }
 
-    private IEnumerator LoadShopAsync()
+    private IEnumerator LoadShopAsync(int shopId)
     {
         MobileAsteroidField.Instance.UnloadAsteroids();
 
@@ -73,6 +78,12 @@ public class ShopLoader : MonoBehaviour
 
         var partPicker = GameObject.Find("Part Picker").GetComponent<ShopPartPicker>();
         partPicker.LoadStore(realShip.GetComponent<ShipComponentManager>());
+
+        var pic = GameObject.Find("Shop Keeper Pic").GetComponent<UnityEngine.UI.Image>();
+        pic.sprite = shopKeepers[shopId];
+
+        var shopText = GameObject.Find("ShopText").GetComponent<UnityEngine.UI.Text>();
+        shopText.text = shopKeeperText[shopId];
     }
 
     public void UnloadShop()

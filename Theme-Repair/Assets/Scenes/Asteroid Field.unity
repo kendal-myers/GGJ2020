@@ -1230,11 +1230,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentFlightTime: 0
-  timeUntilShopAppears: 45
-  distanceToShop: 150
+  timeUntilShopAppears: 5
+  distanceToShop: 100
   currentShopId: 0
   shopPrefabs:
   - {fileID: 1266256234299599058, guid: 7fcbf9a674f7d79489dc8bcf072fd559, type: 3}
+  - {fileID: 5197022360266949623, guid: 19f50f953b6632d49b54046b8286ea84, type: 3}
+  - {fileID: 3403559008305747812, guid: 8952aa8977bd4ff44bc6bf7749e9f6a9, type: 3}
   realShip: {fileID: 1396429562}
   hideInShop:
   - {fileID: 971156083}
@@ -1242,6 +1244,14 @@ MonoBehaviour:
   - {fileID: 886493602}
   displayShip: {fileID: 0}
   shopTracker: {fileID: 611981897}
+  shopKeepers:
+  - {fileID: 21300000, guid: a372ab436f37bce41aee4fec40209e9a, type: 3}
+  - {fileID: 21300000, guid: 094c512f773829f45a6660a9d5bf31d2, type: 3}
+  - {fileID: 21300000, guid: 032bad4314d683a4ba97af8506e9c117, type: 3}
+  shopKeeperText:
+  - Shop keeper 1 text
+  - Shop keeper 2 text
+  - Shop keeper 3 text
 --- !u!4 &1400323470
 Transform:
   m_ObjectHideFlags: 0
@@ -1405,7 +1415,7 @@ MonoBehaviour:
   asteroidPrefabs:
   - {fileID: 636532083895793281, guid: 9305755ba62bee6438f6611e94c6f086, type: 3}
   - {fileID: 636532083895793281, guid: 8f1a4070cece7c14c8924063d2f7f471, type: 3}
-  density: 400
+  density: 0
   minRange: 70
   maxRange: 125
   drift: {x: 25, y: 25, z: 25}
