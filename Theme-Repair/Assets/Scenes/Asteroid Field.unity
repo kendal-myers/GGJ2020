@@ -931,9 +931,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 032bad4314d683a4ba97af8506e9c117, type: 3}
   - {fileID: 21300000, guid: 032bad4314d683a4ba97af8506e9c117, type: 3}
   shopKeeperText:
-  - Shop keeper 1 text
-  - Shop keeper 2 text
-  - Shop keeper 3 text
+  - Welcome to Sugar Shack Repair Shop!
+  - Welcome to Sugar Shack Repair Shop 2!
+  - Welcome to Sugar Shack Repair Shop 3!
   - Shop keeper 4 text
 --- !u!4 &1400323470
 Transform:
