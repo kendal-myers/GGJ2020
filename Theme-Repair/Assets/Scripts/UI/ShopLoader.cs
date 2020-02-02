@@ -4,12 +4,42 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ShopLoader : MonoBehaviour
-{    
+{
+    public float currentFlightTime;
+    public float timeUntilShopAppears;
+    public float distanceToShop = 200f;
+    public int currentShopId = 0;
+    public GameObject[] shopPrefabs;
     public GameObject realShip;
     public GameObject[] hideInShop;
     public GameObject displayShip;
+    public TrackObject shopTracker;
+
+    private void Start()
+    {
+        currentFlightTime = 0f;
+    }
+
+    private void Update()
+    {
+        currentFlightTime += Time.deltaTime;
+        if (currentFlightTime > timeUntilShopAppears)
+        {
+            PlaceShop();
+            this.enabled = false;
+        }
+    }
+
+    private void PlaceShop()
+    {
+        var obj = Instantiate(shopPrefabs[currentShopId], Random.onUnitSphere * distanceToShop, Quaternion.identity);
+        shopTracker.Obj = obj;
+        shopTracker.gameObject.SetActive(true);
+    }
+
     public void LoadShop(int shopId)
     {
+        shopTracker.gameObject.SetActive(false);
         StartCoroutine(LoadShopAsync());
     }
 
@@ -60,6 +90,11 @@ public class ShopLoader : MonoBehaviour
             obj.SetActive(true);
 
         MobileAsteroidField.Instance.BuildAsteroidField();
+
+        //Start flying towards the next shop
+        currentShopId++;
+        currentFlightTime = 0f;
+        this.enabled = true;
     }
 
     public void PurchaseEquip(ShipComponent component)
