@@ -8,6 +8,7 @@ public class BreakOffPieces : MonoBehaviour
     public IntVal cookieTotal;
     public float damageCooldown = .5f;
     public CameraController cameraController;
+    public Collider asteroidReplacer;
     public GameObject explosion;
     private float nextDamage = 0f;
    
@@ -51,6 +52,7 @@ public class BreakOffPieces : MonoBehaviour
         FlightController flightController = GetComponent<FlightController>();
         Rigidbody rb = GetComponent<Rigidbody>();
         Destroy(flightController);
+        asteroidReplacer.enabled = false;
         rb.mass = 1;
         rb.drag = 0.1f;
         rb.angularDrag = 0.1f;
