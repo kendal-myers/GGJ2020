@@ -11,7 +11,7 @@ public class MobileAsteroidField : MonoBehaviour
         if (Instance == null)
             Instance = this;
         else
-            throw new UnityException("Two asteroid fields were loaded at once. Bad!");
+            Destroy(this.gameObject);
     }
     private void OnDestroy()
     {
@@ -64,5 +64,15 @@ public class MobileAsteroidField : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         for (int i = 0; i < tails.Length; i++)
             tails[i].enabled = true;
+    }
+
+    public void SleepAsteroids()
+    {
+        container.gameObject.SetActive(false);
+    }
+
+    public void WakeAsteroids()
+    {
+        container.gameObject.SetActive(true);
     }
 }
