@@ -1080,6 +1080,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realShip: {fileID: 1396429562}
+  hideInShop:
+  - {fileID: 971156083}
+  - {fileID: 716468582}
+  - {fileID: 886493602}
   displayShip: {fileID: 0}
 --- !u!4 &1400323470
 Transform:
@@ -1560,3 +1564,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: {fileID: 11400000, guid: eaf6e8dabf5bbdf41a4332e6888da7b0, type: 2}
   text: {fileID: 1909603801}
+  text2: {fileID: 0}

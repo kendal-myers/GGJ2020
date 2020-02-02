@@ -11,13 +11,13 @@ public class ShopPartPicker : MonoBehaviour
     public void LoadStore(ShipComponentManager shipManager)
     {
         var part1 = components.items.Where(p => shipManager.CanEquip(p)).Random();
-        partStages[0].WireUp(part1, shipManager.gameObject);
+        partStages[0].WireUp(part1, shipManager);
         var part2 = components.items.Where(p => p != part1 && shipManager.CanEquip(p)).Random();
-        partStages[1].WireUp(part2, shipManager.gameObject);
+        partStages[1].WireUp(part2, shipManager);
         var part3 = components.items.Where(p => p != part1 && p != part2 && shipManager.CanEquip(p)).Random();
-        partStages[2].WireUp(part3, shipManager.gameObject);
+        partStages[2].WireUp(part3, shipManager);
         var part4 = components.items.Where(p => p != part1 && p != part2 && p != part3 && shipManager.CanEquip(p)).Random();
-        partStages[3].WireUp(part4, shipManager.gameObject);
+        partStages[3].WireUp(part4, shipManager);
     }
 
     private void WireUp(int idx, ShipComponent component)

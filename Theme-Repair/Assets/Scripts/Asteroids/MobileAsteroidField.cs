@@ -27,7 +27,12 @@ public class MobileAsteroidField : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < density; i++)
+        BuildAsteroidField();
+    }
+
+    public void BuildAsteroidField()
+    {
+        for (int i = 0; i < density; i++)
         {
             var position = Random.onUnitSphere * minRange + Random.insideUnitSphere * (maxRange - minRange);
             var asteroid = Instantiate(asteroidPrefabs.Random(), position, Random.rotation, container);
@@ -66,13 +71,11 @@ public class MobileAsteroidField : MonoBehaviour
             tails[i].enabled = true;
     }
 
-    public void SleepAsteroids()
+    public void UnloadAsteroids()
     {
-        container.gameObject.SetActive(false);
-    }
-
-    public void WakeAsteroids()
-    {
-        container.gameObject.SetActive(true);
+        StopAllCoroutines();
+        foreach (Transform asteroid in container)
+            if (asteroid != container)
+                Destroy(asteroid.gameObject);
     }
 }

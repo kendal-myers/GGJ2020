@@ -6,6 +6,7 @@ public class ShowIntVal : MonoBehaviour
 {
     public IntVal value;
     public TMPro.TextMeshPro text;
+    public UnityEngine.UI.Text text2;
     private void OnEnable()
     {
         value.ValueChanged += Value_ValueChanged;
@@ -14,7 +15,8 @@ public class ShowIntVal : MonoBehaviour
 
     private void Value_ValueChanged()
     {
-        text.text = value.Value.ToString();
+        if (text) text.text = value.Value.ToString();
+        if (text2) text2.text = value.Value.ToString();
     }
 
     private void OnDisable()
