@@ -35,10 +35,11 @@ public class ShopLoader : MonoBehaviour
         }
     }
 
+    private GameObject currentShop;
     private void PlaceShop()
     {
-        var obj = Instantiate(shopPrefabs[currentShopId], realShip.transform.position + Random.onUnitSphere * distanceToShop, Quaternion.identity);
-        shopTracker.Obj = obj;
+        currentShop = Instantiate(shopPrefabs[currentShopId], realShip.transform.position + Random.onUnitSphere * distanceToShop, Quaternion.identity);
+        shopTracker.Obj = currentShop;
         shopTracker.gameObject.SetActive(true);
     }
 
@@ -103,6 +104,7 @@ public class ShopLoader : MonoBehaviour
         MobileAsteroidField.Instance.BuildAsteroidField();
 
         //Start flying towards the next shop
+        Destroy(currentShop);
         currentShopId++;
         currentFlightTime = 0f;
         this.enabled = true;
