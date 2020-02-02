@@ -43,15 +43,11 @@ public class ShopEntry : MonoBehaviour
 
             Camera.main.transform.LookAt(ship.transform.position);
             yield return null;
-        }
-
-        ship.transform.localScale = Vector3.one;
-        ship.GetComponent<FlightController>().enabled = true;
-        Camera.main.GetComponent<CameraController>().enabled = true;
+        } 
 
         var shop = GameObject.FindObjectOfType<ShopLoader>();
         yield return shop.LoadShop(shopId);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.5f);
         ship.transform.Find("candyShip").localScale = Vector3.one;
         ship.GetComponent<FlightController>().enabled = true;
         Camera.main.GetComponent<CameraController>().enabled = true;
