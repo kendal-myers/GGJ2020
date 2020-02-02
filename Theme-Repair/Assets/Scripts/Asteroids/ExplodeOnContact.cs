@@ -32,6 +32,9 @@ public class ExplodeOnContact : MonoBehaviour
             rb.AddExplosionForce(explosionForce, this.transform.position, explosionRange);
         }
 
-        MobileAsteroidField.Instance.Reposition(this.transform);        
+        MobileAsteroidField.Instance.Reposition(this.transform);
+
     }
+
+
 }

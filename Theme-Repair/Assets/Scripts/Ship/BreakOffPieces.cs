@@ -5,13 +5,20 @@ using System.Linq;
 
 public class BreakOffPieces : MonoBehaviour
 {
+    public IntVal cookieTotal;
     public float damageCooldown = .5f;
     private float nextDamage = 0f;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Asteroid"))
         {
-            Break();
+            if (collision.gameObject.name.Contains("Good"))
+            {
+                cookieTotal.Value += Random.Range(25, 35);
+            } else
+            {
+                Break();
+            }            
         }
     }
 
