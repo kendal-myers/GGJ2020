@@ -20,5 +20,9 @@ public enum ShipComponentType
     Peppermints = 4,
     Gumdrops = 5,
     Lollipop = 6,
+    SmartieBombs = 7,
+    UnicornHorn = 8,
+    NerdsFin = 9,
+    BunnyEars = 10
 }
 

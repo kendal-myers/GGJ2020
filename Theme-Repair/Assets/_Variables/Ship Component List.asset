@@ -15,30 +15,30 @@ MonoBehaviour:
   items:
   - name: Engines
     type: 3
-    prefab: {fileID: 527060674459653393, guid: 0184bdc8f6a42444c9c9b28d0ce23c99, type: 3}
+    prefab: {fileID: 6505379375211857590, guid: 4c2078ed0b08fcc44bda9ee1216ffd07,
+      type: 3}
     cost: 150
     description: They make you go go go
   - name: Candy Cane Trim
     type: 1
-    prefab: {fileID: 5443799439451943945, guid: 4d0f5c84d58cafc44ba28aa43dfa4552,
-      type: 3}
+    prefab: {fileID: 247303415177173026, guid: 492182a2092621346bc34ff9475679e6, type: 3}
     cost: 250
     description: Nothing says festive like candy canes
   - name: Sprinkle Donut
     type: 2
-    prefab: {fileID: 6409036272622922251, guid: c1d33a3058f302e4bb9e968a2f0c8710,
+    prefab: {fileID: 8885737786390136617, guid: bd4a6d0353f5e0647bc5c62d4713c1e6,
       type: 3}
     cost: 180
     description: "Cop magnet, but they likely won\u2019t pull you over in space"
   - name: Gumdrop Lights
     type: 5
-    prefab: {fileID: 8185868861106352108, guid: 4e28f60c30bdb004bbeac0eec176f1b2,
+    prefab: {fileID: 2436273149395353731, guid: 04cb913653c88a447a3a2a393f1a220c,
       type: 3}
     cost: 180
     description: Add some color to the top of your ship
   - name: Lollipop
     type: 6
-    prefab: {fileID: 1757998449526648365, guid: 9a6f693f40ba3ad44b55496befd71961,
+    prefab: {fileID: 9091181248480787203, guid: 75bc66a1acbdc6e4cb86000e81693bb7,
       type: 3}
     cost: 100
     description: The best part of visiting the bank
@@ -48,3 +48,25 @@ MonoBehaviour:
       type: 3}
     cost: 600
     description: Popular with old and young alike
+  - name: Smartie Bombs
+    type: 7
+    prefab: {fileID: 874720331590857564, guid: 7daf89a016b772f45aee8ebd994d3fc2, type: 3}
+    cost: 400
+    description: Get 'em a cavity
+  - name: Unicorn Horn
+    type: 8
+    prefab: {fileID: 3087928448862693750, guid: feea52a2b4bef594790ed411fc44cda8,
+      type: 3}
+    cost: 350
+    description: Is there anything more ferocious?
+  - name: Nerds Fin
+    type: 9
+    prefab: {fileID: 847897878618801830, guid: 86c1b32bfbf6136408cf7a691fd99b33, type: 3}
+    cost: 140
+    description: Look more like a shark
+  - name: Bunny Ears
+    type: 10
+    prefab: {fileID: 8666703415206326819, guid: 45404b5191bc16248900ea89be2327ac,
+      type: 3}
+    cost: 300
+    description: These are just super cute
