@@ -307,9 +307,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 354350388285138771}
-  forwardSpeed: 15
+  forwardSpeed: 18
   turnSpeedV: 3
   turnSpeedH: 2
+  boostSpeed: 5
+  boostChargeMax: 100
+  boostChargeRate: 0.1
+  boostChargeCurrent: 0
 --- !u!54 &3647782415050009406
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -318,8 +322,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354350388285138771}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.8
+  m_Mass: 35000
+  m_Drag: 1.5
   m_AngularDrag: 0.5
   m_UseGravity: 0
   m_IsKinematic: 0

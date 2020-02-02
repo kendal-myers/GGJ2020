@@ -220,7 +220,7 @@ PrefabInstance:
     - target: {fileID: 3647782415050009406, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: m_Drag
-      value: 0.8
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3647782415050009406, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
@@ -231,6 +231,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325157175461905076, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: forwardSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325157175461905076, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: boostChargeMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5325157175461905076, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: boostChargeRate
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8556740446556759116, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
