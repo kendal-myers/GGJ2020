@@ -9,6 +9,7 @@ public class Seeker : MonoBehaviour
     public float seekForce = 2f;
     public float seekDelay = 1.25f;
     public float seekSpeed = 1f;
+    public float tolerance = 3f;
 
     private void Update()
     {
@@ -16,10 +17,12 @@ public class Seeker : MonoBehaviour
         seekDelay -= Time.deltaTime;
         if (seekDelay < 0f)
         {
-            var desired = target.position - transform.position * seekForce * Time.deltaTime;
+            var distance = (target.position - transform.position);
+            var desired = distance.normalized * seekForce * Time.deltaTime;
+            
             velocity = Vector3.MoveTowards(velocity, desired, seekSpeed * Time.deltaTime);
-
-            velocity += (target.position - transform.position) * seekForce * Time.deltaTime;
-        }
+            if (distance.magnitude < tolerance)
+                Destroy(this.gameObject);
+        }        
     }
 }

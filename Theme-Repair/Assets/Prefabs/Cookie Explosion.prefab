@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 7047344646783995812, guid: 5d7c09f6c4808f14d89816cc3db01ff1, type: 3}
   explosionCount: 25
-  explosionForce: 25
+  explosionForce: 50
 --- !u!114 &5680165380213986982
 MonoBehaviour:
   m_ObjectHideFlags: 0

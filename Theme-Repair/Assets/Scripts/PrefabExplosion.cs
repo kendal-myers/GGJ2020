@@ -21,6 +21,6 @@ public class PrefabExplosion : MonoBehaviour
             obj.velocity = dir * explosionForce;
             obj.target = shipT;
         }
-        this.transform.parent = shipT;  
+        Destroy(this.gameObject);
     }
 }

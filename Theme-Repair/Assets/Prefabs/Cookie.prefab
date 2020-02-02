@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6918795754649120818}
   - component: {fileID: 7047344646783995812}
   - component: {fileID: 433306405776329070}
+  - component: {fileID: 9165048762960338308}
   m_Layer: 9
   m_Name: Cookie
   m_TagString: Untagged
@@ -47,9 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}
-  seekForce: 10
-  seekDelay: 0.75
-  dampener: 0.95
+  seekForce: 7500
+  seekDelay: 0.2
+  seekSpeed: 50
+  tolerance: 3
 --- !u!114 &433306405776329070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +69,23 @@ MonoBehaviour:
   rotationSpeed: {x: 180, y: 180, z: 180}
   rotationMode: 1
   useUnscaledTime: 0
+--- !u!114 &9165048762960338308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430721635601036170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd6a63807134ec41ac60c2fa8c45513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pieces:
+  - {fileID: 6918795754649120818}
+  lifetime: 1
+  startDelay: 1.5
+  progress: 0
 --- !u!1001 &5315389544701282267
 PrefabInstance:
   m_ObjectHideFlags: 0
