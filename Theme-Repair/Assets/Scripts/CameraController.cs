@@ -16,11 +16,19 @@ public class CameraController : MonoBehaviour
     public float heightDamping = 2.0f;
     public float rotationDamping = 3.0f;
 
+    private bool stopAndStare = false;
+
     void LateUpdate()
     {
         // Early out if we don't have a target
         if (!target)
             return;
+
+        if (stopAndStare)
+        {
+            transform.LookAt(target);
+            return;
+        }
 
         Vector3 followpos = new Vector3(0.0f, height, -distance);
         Quaternion lookrotation = Quaternion.identity;
@@ -51,7 +59,10 @@ public class CameraController : MonoBehaviour
 
         transform.localRotation = currentRotation;
         transform.localPosition = currentPosition;
+    }
 
-
+    public void StopAndStare(bool doit)
+    {
+        stopAndStare = doit;
     }
 }
