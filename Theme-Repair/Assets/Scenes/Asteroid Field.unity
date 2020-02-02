@@ -220,6 +220,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3023014028602171372, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 6347931402663993193, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: cameraController
@@ -280,7 +285,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1396429567, guid: 1e10724072975db47845bbed115c2a46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e10724072975db47845bbed115c2a46, type: 3}
 --- !u!4 &564755762 stripped
 Transform:

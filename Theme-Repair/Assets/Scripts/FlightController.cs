@@ -15,7 +15,6 @@ public class FlightController : MonoBehaviour
 
     public Sounds sounds;
     public AudioSource audioSource;
-    public AudioSource source2;
     public AudioClip thrustSound;
     public AudioClip boostSound;
 
@@ -31,7 +30,6 @@ public class FlightController : MonoBehaviour
         isBoosting = false;
         boostOff = true;
         playIdleThrusterAudio();
-        source2 = GetComponents<AudioSource>()[1];
     }
 
     // Update is called once per frame
@@ -60,11 +58,6 @@ public class FlightController : MonoBehaviour
         isBoostPressed = Input.GetAxis("Boost") > 0.5f || Input.GetAxis("Boost") < -0.5f;
                 
         isBoosting = isBoostPressed && boostChargeCurrent > 5;
-
-        if (!wasBoosting && isBoosting)
-        {
-            source2.Play();
-        }
 
         float f = rb.velocity.magnitude / 20;
         audioSource.pitch = Mathf.Clamp(f, 1, 3);
