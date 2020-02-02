@@ -259,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &354350388285138771
 GameObject:
@@ -272,6 +273,7 @@ GameObject:
   - component: {fileID: 5325157175461905076}
   - component: {fileID: 3647782415050009406}
   - component: {fileID: 6347931402663993193}
+  - component: {fileID: 3023014028602171372}
   m_Layer: 10
   m_Name: Ship
   m_TagString: Untagged
@@ -313,6 +315,8 @@ MonoBehaviour:
   boostSpeed: 5
   boostChargeMax: 100
   boostChargeRate: 0.1
+  sounds: {fileID: 0}
+  audioSource: {fileID: 3023014028602171372}
   boostChargeCurrent: 0
 --- !u!54 &3647782415050009406
 Rigidbody:
@@ -343,6 +347,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageCooldown: 0.5
+--- !u!82 &3023014028602171372
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354350388285138771}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &538965544405400497
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &567506006974599701
 GameObject:
@@ -600,6 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &825152365423284837
 GameObject:
@@ -729,6 +831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &1318430819229130594
 GameObject:
@@ -858,6 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &1499085224111024172
 GameObject:
@@ -987,6 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &2127075442140446821
 GameObject:
@@ -1116,6 +1221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &2204637121145948259
 GameObject:
@@ -1245,6 +1351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &3213481455808813625
 GameObject:
@@ -1374,6 +1481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &3742541397412405476
 GameObject:
@@ -1503,6 +1611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &3836227210425127163
 GameObject:
@@ -1666,6 +1775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &4171915219611545695
 GameObject:
@@ -1795,6 +1905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &4902629889378124741
 GameObject:
@@ -1924,6 +2035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &5273052996777472645
 GameObject:
@@ -2053,6 +2165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &5534938870686869839
 GameObject:
@@ -2182,6 +2295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &5554549678487992355
 GameObject:
@@ -2407,6 +2521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &7016780686146114131
 GameObject:
@@ -2536,6 +2651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &7420658226562649885
 GameObject:
@@ -2697,6 +2813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &7745060406174918925
 GameObject:
@@ -2826,6 +2943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &8074811871797532551
 GameObject:
@@ -2955,6 +3073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &8499277157752020965
 GameObject:
@@ -3085,6 +3204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &8568225494296920258
 GameObject:
@@ -3214,6 +3334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &8773476272542645789
 GameObject:
@@ -3343,6 +3464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &8949843479904424604
 GameObject:
@@ -3473,6 +3595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces: []
   lifetime: 5
+  startDelay: 0
   progress: 0
 --- !u!1 &9208607552150269940
 GameObject:

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2989700976943240811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5784344767485550561}
+  - component: {fileID: 23667490844260740}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5784344767485550561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989700976943240811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 301.7644, y: 676.79315, z: -2.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23667490844260740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2989700976943240811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90bc71d9dcc9fc54da78a2234f132258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookieGet: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  damage: {fileID: 8300000, guid: 4b4dd7245f6104c8c8eb07ccf6b386ed, type: 3}
+  asteroidBreak: {fileID: 8300000, guid: b99da9a57308d4ba1bee1cf1d9038376, type: 3}
+  boost: {fileID: 8300000, guid: a0010a1a0c474473b81729eb770c485f, type: 3}
+  idleThrust: {fileID: 8300000, guid: b9eff218e132a4e76be78840eca96fb2, type: 3}
+  die: {fileID: 8300000, guid: ff5f85da24bc943d1abdc5760a22bc81, type: 3}
+  buy: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+  titleMusic: {fileID: 0}
+  storyMusic: {fileID: 0}
+  gameplayMusic: {fileID: 0}
+  shopMusic: {fileID: 0}
+  rewind: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
