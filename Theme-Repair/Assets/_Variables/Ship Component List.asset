@@ -52,13 +52,13 @@ MonoBehaviour:
     type: 7
     prefab: {fileID: 874720331590857564, guid: 7daf89a016b772f45aee8ebd994d3fc2, type: 3}
     cost: 400
-    description: Get 'em a cavity
+    description: Sugary weapons!
   - name: Unicorn Horn
     type: 8
     prefab: {fileID: 3087928448862693750, guid: feea52a2b4bef594790ed411fc44cda8,
       type: 3}
     cost: 350
-    description: Is there anything more ferocious?
+    description: Pointy things seem useful in a world full of asteroids
   - name: Nerds Fin
     type: 9
     prefab: {fileID: 847897878618801830, guid: 86c1b32bfbf6136408cf7a691fd99b33, type: 3}
@@ -69,4 +69,4 @@ MonoBehaviour:
     prefab: {fileID: 8666703415206326819, guid: 45404b5191bc16248900ea89be2327ac,
       type: 3}
     cost: 300
-    description: These are just super cute
+    description: Too cute to not have

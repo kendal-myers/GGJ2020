@@ -292,12 +292,12 @@ MonoBehaviour:
       some."
     image: {fileID: 21300000, guid: add8ef4612963824a9f61d953e3b23b6, type: 3}
     nextText: Next ->
-  - text: Because of the rarity, cookies were valuable.  Twex hoped his journey would
-      reward him with a surplus of cookies that he could use to barter for better
-      ship parts.  If he could manage to upgrade his ship and repair any damage it
-      takes from the ballistic broccoli, he might be able to complete his journey.
+  - text: Because of their rarity, cookies were valuable.  Twex hoped his journey
+      would reward him with a surplus of cookies that he could use to barter for
+      better ship parts.  If he can manage to upgrade his ship and repair any damage
+      it takes from the ballistic broccoli, he might be able to complete his journey.
     image: {fileID: 21300000, guid: add8ef4612963824a9f61d953e3b23b6, type: 3}
-    nextText: <Grab Cookies!>
+    nextText: Grab Cookies!
 --- !u!114 &164348183
 MonoBehaviour:
   m_ObjectHideFlags: 0
