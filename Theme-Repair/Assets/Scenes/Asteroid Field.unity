@@ -273,6 +273,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: eaf6e8dabf5bbdf41a4332e6888da7b0,
         type: 2}
+    - target: {fileID: 6347931402663993193, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 1500534583}
+    - target: {fileID: 6347931402663993193, guid: 1e10724072975db47845bbed115c2a46,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 1950959795169390, guid: 1eca039e32cbc4e4f8d7dfb1b4e1b47c,
+        type: 3}
     - target: {fileID: 8556740446556759116, guid: 1e10724072975db47845bbed115c2a46,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1328,6 +1339,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1500534583 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9089457934982081680, guid: f428a3f867490b7499901f82735d7bb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 356586557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500534580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c093221df305d44a98ff1e373b5c6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1500534584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3298615430642578437, guid: f428a3f867490b7499901f82735d7bb5,
