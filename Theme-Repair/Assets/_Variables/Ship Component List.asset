@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1880dbd4ea49cc84baf318c163c27835, type: 3}
+  m_Name: Ship Component List
+  m_EditorClassIdentifier: 
+  items:
+  - name: Engines
+    type: 3
+    prefab: {fileID: 527060674459653393, guid: 0184bdc8f6a42444c9c9b28d0ce23c99, type: 3}
+    cost: 0
+    description: They make you go go go
+  - name: Candy Cane Accents
+    type: 1
+    prefab: {fileID: 5443799439451943945, guid: 4d0f5c84d58cafc44ba28aa43dfa4552,
+      type: 3}
+    cost: 0
+    description: Four candy cane bumpers
+  - name: Donut
+    type: 2
+    prefab: {fileID: 6409036272622922251, guid: c1d33a3058f302e4bb9e968a2f0c8710,
+      type: 3}
+    cost: 0
+    description: A big bumper for your body
+  - name: Gumdrop Lights
+    type: 5
+    prefab: {fileID: 8185868861106352108, guid: 4e28f60c30bdb004bbeac0eec176f1b2,
+      type: 3}
+    cost: 0
+    description: Three little lights to keep you safe
+  - name: Lollipop Antenna
+    type: 6
+    prefab: {fileID: 1757998449526648365, guid: 9a6f693f40ba3ad44b55496befd71961,
+      type: 3}
+    cost: 0
+    description: A sweet little antenna
+  - name: Peppermints
+    type: 4
+    prefab: {fileID: 8925152170659318351, guid: dd2245aefcdf40e498c171ce0f5c7574,
+      type: 3}
+    cost: 0
+    description: Twelve mints a minting
