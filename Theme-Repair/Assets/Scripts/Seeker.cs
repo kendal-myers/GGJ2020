@@ -11,6 +11,13 @@ public class Seeker : MonoBehaviour
     public float seekSpeed = 1f;
     public float tolerance = 3f;
 
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         this.transform.position += velocity * Time.deltaTime;
@@ -22,7 +29,9 @@ public class Seeker : MonoBehaviour
             
             velocity = Vector3.MoveTowards(velocity, desired, seekSpeed * Time.deltaTime);
             if (distance.magnitude < tolerance)
+            {
                 Destroy(this.gameObject);
+            }
         }        
     }
 }
