@@ -70,7 +70,8 @@ public class ShopLoader : MonoBehaviour
             ps.Stop();
 
         Destroy(displayShip.GetComponent<FlightController>());
-        
+        Destroy(displayShip.GetComponent<AudioSource>());
+
         SceneManager.MoveGameObjectToScene(displayShip, SceneManager.GetSceneByName("Shop"));
                 
         var shipPedestal = GameObject.Find("Ship Offset");
