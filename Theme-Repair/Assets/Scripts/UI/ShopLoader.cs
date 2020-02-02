@@ -43,10 +43,10 @@ public class ShopLoader : MonoBehaviour
         shopTracker.gameObject.SetActive(true);
     }
 
-    public void LoadShop(int shopId)
+    public IEnumerator LoadShop(int shopId)
     {
         shopTracker.gameObject.SetActive(false);
-        StartCoroutine(LoadShopAsync(shopId));
+        yield return StartCoroutine(LoadShopAsync(shopId));
     }
 
     private IEnumerator LoadShopAsync(int shopId)
@@ -76,6 +76,8 @@ public class ShopLoader : MonoBehaviour
 
         displayShip.transform.localPosition = Vector3.zero;
         displayShip.transform.localRotation = Quaternion.identity;
+        displayShip.transform.localScale = Vector3.one;
+        displayShip.transform.Find("candyShip").localScale = Vector3.one;
 
         var partPicker = GameObject.Find("Part Picker").GetComponent<ShopPartPicker>();
         partPicker.LoadStore(realShip.GetComponent<ShipComponentManager>());

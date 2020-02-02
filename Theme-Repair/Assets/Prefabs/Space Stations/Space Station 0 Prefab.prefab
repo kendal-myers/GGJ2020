@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1266256234299599069}
   - component: {fileID: 1266256234299599070}
   m_Layer: 12
-  m_Name: Space Station Prefab
+  m_Name: Space Station 0 Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 40
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1266256234299599069
 MonoBehaviour:
@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopId: 0
+  isEndOfGame: 0
 --- !u!1001 &1266256234642893933
 PrefabInstance:
   m_ObjectHideFlags: 0
