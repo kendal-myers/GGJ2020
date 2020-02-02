@@ -18,33 +18,33 @@ MonoBehaviour:
     prefab: {fileID: 527060674459653393, guid: 0184bdc8f6a42444c9c9b28d0ce23c99, type: 3}
     cost: 150
     description: They make you go go go
-  - name: Candy Cane Accents
+  - name: Candy Cane Trim
     type: 1
     prefab: {fileID: 5443799439451943945, guid: 4d0f5c84d58cafc44ba28aa43dfa4552,
       type: 3}
     cost: 250
-    description: Four candy cane bumpers
-  - name: Donut
+    description: Nothing says festive like candy canes
+  - name: Sprinkle Donut
     type: 2
     prefab: {fileID: 6409036272622922251, guid: c1d33a3058f302e4bb9e968a2f0c8710,
       type: 3}
     cost: 180
-    description: A big bumper for your body
+    description: "Cop magnet, but they likely won\u2019t pull you over in space"
   - name: Gumdrop Lights
     type: 5
     prefab: {fileID: 8185868861106352108, guid: 4e28f60c30bdb004bbeac0eec176f1b2,
       type: 3}
     cost: 180
-    description: Three little lights to keep you safe
-  - name: Lollipop Antenna
+    description: Add some color to the top of your ship
+  - name: Lollipop
     type: 6
     prefab: {fileID: 1757998449526648365, guid: 9a6f693f40ba3ad44b55496befd71961,
       type: 3}
     cost: 100
-    description: A sweet little antenna
-  - name: Peppermints
+    description: The best part of visiting the bank
+  - name: Peppermint Disks
     type: 4
     prefab: {fileID: 8925152170659318351, guid: dd2245aefcdf40e498c171ce0f5c7574,
       type: 3}
     cost: 600
-    description: Twelve mints a minting
+    description: Popular with old and young alike
