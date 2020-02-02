@@ -12,6 +12,8 @@ public class ShipComponentManager : MonoBehaviour
     private void InitComponents()
     {
         AddShipComponent(list.items.First(i => i.type == ShipComponentType.Engines));
+        AddShipComponent(list.items.First(i => i.type == ShipComponentType.SmartieBombs));
+        AddShipComponent(list.items.First(i => i.type == ShipComponentType.BunnyEars));
         AddShipComponent(list.items.Where(i => !components.Keys.Contains(i.type)).Random());
     }
 

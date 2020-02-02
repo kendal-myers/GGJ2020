@@ -13,7 +13,7 @@ public class BreakableComponent: MonoBehaviour
 
     private void Awake()
     {
-        myCollider = GetComponent<Collider>();
+        myCollider = GetComponentInChildren<Collider>();
         terminator = GetComponent<ShrinkAndDestroy>();
     }
 

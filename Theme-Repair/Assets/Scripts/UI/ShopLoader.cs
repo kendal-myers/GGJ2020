@@ -38,7 +38,10 @@ public class ShopLoader : MonoBehaviour
     private GameObject currentShop;
     private void PlaceShop()
     {
-        currentShop = Instantiate(shopPrefabs[currentShopId], realShip.transform.position + Random.onUnitSphere * distanceToShop, Quaternion.identity);
+        var d = distanceToShop;
+        if (currentShopId == shopPrefabs.Length - 1)
+            d *= 3;
+        currentShop = Instantiate(shopPrefabs[currentShopId], realShip.transform.position + Random.onUnitSphere * d, Quaternion.identity);
         shopTracker.Obj = currentShop;
         shopTracker.gameObject.SetActive(true);
     }
